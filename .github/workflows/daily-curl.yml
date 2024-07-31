@@ -1,0 +1,21 @@
+name: Daily Curl Operation  
+ 
+on:  
+  schedule:  
+    - cron: '0 17 * * *'  # 每天UTC时间0点执行  
+ 
+jobs:  
+  curl-job:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Execute curl  
+        run: |  
+          curl --location --request POST 'https://vip-php-platform.myscrm.cn/index.php?site=api&r=checkin/checkin&tenant_code=zjsjadmin&token=070a12582099fa4d658ced74f8898b77&member_id=364&orgcode=zjsjadmin' \
+--header 'Content-Type: application/json' --data-raw '{"prize": 1}'
+      - name: curl2
+        run: |
+          curl --location --request POST 'https://vip-php-platform.myscrm.cn/index.php?site=api&r=checkin/checkin&tenant_code=zjsjadmin&token=bad4b00c3270b51323040f02c9a8fd64&member_id=18313&orgcode=zjsjadmin' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+    "prize": 1
+}'

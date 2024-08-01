@@ -1,3 +1,4 @@
+name: Daily Curl Operation
 on:  
   schedule:  
     - cron: '2 10 * * *'  # 每天UTC时间0点执行  

@@ -1,7 +1,7 @@
 name: Daily Curl Operation
 on:  
   schedule:  
-    - cron: '48 06 * * *'  
+    - cron: '0 07,08 * * *'  
   
 jobs:  
   curl-job:  

@@ -1,7 +1,7 @@
 name: Daily Curl Operation
 on:  
   schedule:  
-    - cron: '25 10,11 * * *'  
+    - cron: '30 06 * * *'  
   
 jobs:  
   curl-job:  
@@ -16,7 +16,7 @@ jobs:
           }'
       - name: curl  
         run: |  
-          curl --location --request POST 'https://vip-php-platform.myscrm.cn/index.php?site=api&r=checkin/checkin&tenant_code=zjsjadmin&token=070a12582099fa4d658ced74f8898b77&member_id=364&orgcode=zjsjadmin' \  
+          curl --location --request POST 'https://vip-php-platform.myscrm.cn/index.php?site=api&r=checkin/checkin&tenant_code=zjsjadmin&token=f5d5ff1cf25201ac783df3424867c5cf&member_id=364&orgcode=zjsjadmin' \  
           --header 'Content-Type: application/json' \  
           --data-raw '{  
               "prize": 1  

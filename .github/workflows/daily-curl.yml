@@ -1,19 +1,12 @@
 name: Daily Curl Operation
 on:  
   schedule:  
-    - cron: '30 06 * * *'  
+    - cron: '48 06 * * *'  
   
 jobs:  
   curl-job:  
     runs-on: ubuntu-latest  
     steps:  
-      - name: curl2  
-        run: |  
-          curl --location --request POST 'https://vip-php-platform.myscrm.cn/index.php?site=api&r=checkin/checkin&tenant_code=zjsjadmin&token=bad4b00c3270b51323040f02c9a8fd64&member_id=18313&orgcode=zjsjadmin' \  
-          --header 'Content-Type: application/json' \  
-          --data-raw '{  
-              "prize": 1  
-          }'
       - name: curl  
         run: |  
           curl --location --request POST 'https://vip-php-platform.myscrm.cn/index.php?site=api&r=checkin/checkin&tenant_code=zjsjadmin&token=f5d5ff1cf25201ac783df3424867c5cf&member_id=364&orgcode=zjsjadmin' \  
